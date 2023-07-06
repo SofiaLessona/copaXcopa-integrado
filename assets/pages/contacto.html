@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/contacto.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Raleway&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="icon" href="../../assets/media/img/favicon.png">
+    <title>Contacto. copaXcopa</title>
+</head>
+<body>
+        
+    <!-- HEADER -->
+    
+    <header>
+        <nav>
+            <a class="boton_logo" href="../../index.html" class="logo"><img src="../../assets/media/img/logo.jpg" alt="logo"></a>
+                
+            <div id="nav" class="div-nav">
+                <ul class="lista-paginas">
+                    <div></div>
+                    <li><a class="enlace" href="../../index.html">Home</a></li>
+                    <li><a class="enlace" href="../../assets/pages/recetas.html">Recetas</a></li>
+                    <li><a class="enlace" href="../../assets/pages/costeo.html">Costeo</a></li>
+                    <li><a class="enlace" href="../../assets/pages/contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+    
+            <button id="button-menu" class="button-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        
+        </nav>
+    </header>
+    
+    <!-- MAIN -->
+
+    <main class="main_contacto">
+        
+        <h1 class="contacto-titulo">CONTACTO</h1>
+            
+        <!-- Formulario de contacto -->
+        <form class="formulario-contacto">
+
+            <input type="text" class="formulario-control" id="nombre" placeholder="INGRESA TU NOMBRE" name="nombre" value="" required>
+            
+            <input type="email" class="formulario-control" id="email" placeholder="INGRESA TU EMAIL" name="email" value="" required>
+            
+            <textarea class="formulario-control" rows="10" placeholder="¿TE GUSTO NUESTRA PAGINA WEB? Dejanos tu comentario." name="message" required></textarea>
+                
+            <button class="boton-enviar" id="submit" type="submit" value="SEND">
+                <span class="enviar">ENVIAR</span>
+            </button>
+                
+        </form>
+              
+        <!-- Sección de opciones de contacto -->
+        <div class="contactanos">
+            <div class="favicon-cont">
+                <a href="https://goo.gl/maps/aQqGQVQcRaYDqKKg6"><img class="img-contact favicon-a" src="../../assets/media/img/contact/map_icon_tr.png" alt="mapa"></a>
+                <p>Av. Duarte Quirós 1400, X5000 Córdoba</p>
+            </div>
+
+            <hr>
+
+            <div class="favicon-cont">
+                <img class="img-contact favicon-a" src="../../assets/media/img/contact/tel4.png" alt="Telefono">
+                <p>+549 (0351) 155-555-55d</p>
+            </div>
+
+            <hr>
+
+            <div class="favicon-cont">
+                <img class="img-contact favicon-a" src="../../assets/media/img/contact/email1.png" alt="Email">
+                <p>copaxcopa@github.com</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+
+    <footer> 
+        <a href="https://www.instagram.com/"><img src="../../assets/media/img/logo-instagram2.jpg" alt="logo de instagram" height="40px" width="40px"></a>
+        <a href="https://www.facebook.com/"><img src="../../assets/media/img/logo-facebook.png" alt="logo de facebook" height="40px" width="40px"></a>
+        <a href="https://www.youtube.com/@barmaninred"><img src="../../assets/media/img/youtube-logo.png" alt="logo de youtube" height="40px" width="40px"></a>
+    </footer>
+
+    <script src="../js/contacto.js"></script>
+    <script src="../../assets/js/app.js"></script>
+</body>
+</html>
