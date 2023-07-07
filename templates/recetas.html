@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="icon" href="{% static 'img/favicon.png' %}">
+    <link rel="stylesheet" href="{% static 'css/recetas.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Raleway&family=Roboto:wght@300&display=swap" rel="stylesheet">
+  
+    <title>Recetas. copaXcopa</title>
+</head>
+<body>
+        
+    <!-- HEADER -->
+    
+    <header>
+        <nav>
+            <a class="boton_logo" href="{% url 'index' %}" class="logo"><img src="{% static '../static/css/media/logo.jpg' %}" alt="logo"></a>
+            
+            <div id="nav" class="div-nav">
+                <ul class="lista-paginas">
+                    <div></div>
+                    <li><a class="enlace" href="{% url 'index' %}">Home</a></li>
+                    <li><a class="enlace" href="{% url 'recetas' %}">Recetas</a></li>
+                    <li><a class="enlace" href="{% url 'costeo' %}">Costeo</a></li>
+                    <li><a class="enlace" href="{% url 'contacto' %}">Contacto</a></li>
+                </ul>
+            </div>
+
+            <button id="button-menu" class="button-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+    
+        </nav>
+    </header>
+    
+    <!-- MAIN -->
+
+    <main id="main-recetas">
+        <div id="main-container">
+
+            <!-- Barra vertical para navegar entre recetas de acuerdo al destilado de preferencia -->
+            <div class="left-sidebar">
+                <div id="menu-sidebar">
+                    <ul>
+                        <li><a class="enlace-sidebar" href="#gin">GIN</a></li>
+                        <li><a class="enlace-sidebar" href="#vodka">VODKA</a></li>
+                        <li><a class="enlace-sidebar" href="#tequila">TEQUILA</a></li>
+                        <li><a class="enlace-sidebar" href="#ron">RON</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <h2>A continuación encontrarás interesantes recetas <br/> para probar y experimentar con quien quieras</h2>
+
+            <!-- Data de recetas traída de API creada en sheetDB con Vue -->
+            <section class="tarjeta-receta" v-for="receta in recetas">
+                
+                <h2 v-bind:id="receta.id">
+                    {{ receta.nombre }}
+                </h2>
+
+                <iframe v-bind:src="receta.video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <p>Descripcion: <br/>
+                    {{ receta.descripcion }}
+                </p>
+                <p>Ingredientes: <br/>
+                    {{ receta.ingredientes }}
+                </p>
+                <p>Preparación: <br/>
+                    {{ receta.preparacion }}
+                </p>
+                
+            </section>   
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+
+    <footer> 
+        <a href="https://www.instagram.com/"><img src="{% static './css/media/logo-instagram2.jpg' %}" alt="logo de instagram" height="40px" width="40px"></a>
+        <a href="https://www.facebook.com/"><img src="{% static './css/media/logo-facebook.png' %}" alt="logo de facebook" height="40px" width="40px"></a>
+        <a href="https://www.youtube.com/@barmaninred"><img src="{% static './css/media/youtube-logo.png' %}" alt="logo de youtube" height="40px" width="40px"></a>
+    </footer>
+
+
+    <script src="{% static 'js/app.js' %}"></script>
+    <script src="{% static 'js/recetas.js' %}"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+   
+</body>
+</html>

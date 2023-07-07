@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="icon" href="{% static 'img/favicon.png' %}">
+    <link rel="stylesheet" href="{% static 'css/costeo.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Raleway&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <title>Costeo. copaXcopa</title>
+</head>
+<body>
+        
+    <!-- HEADER -->
+    
+    <header>
+        <nav>
+            <a class="boton_logo" href="{% url 'index' %}" class="logo"><img src="{% static '../static/css/media/logo.jpg' %}" alt="logo"></a>
+            
+            <div id="nav" class="div-nav">
+                <ul class="lista-paginas">
+                    <div></div>
+                    <li><a class="enlace" href="{% url 'index' %}">Home</a></li>
+                    <li><a class="enlace" href="{% url 'recetas' %}">Recetas</a></li>
+                    <li><a class="enlace" href="{% url 'costeo' %}">Costeo</a></li>
+                    <li><a class="enlace" href="{% url 'contacto' %}">Contacto</a></li>
+                </ul>
+            </div>
+
+            <button id="button-menu" class="button-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+    
+        </nav>
+    </header>
+    
+    <!-- MAIN -->
+    
+    <main class="main_costeo">
+        <h2>Para poder usar esta tabla de costeo necesitas conocer el precio del producto a utilizar. Coloca la cantidad que te dice la receta y la presentación en la que viene dicho producto expresado en mililitros (ml)</h2>
+    
+        <section class="contenedor_productos">
+            <form class="formulario"> 
+                <label for="">Producto</label> 
+                <input type="text" id="nombreProducto" placeholder="Nombre del producto" required/> 
+    
+                <label for="">Presentación</label>
+                <input type="text" id="mlPresentacion" placeholder="ml" required/>
+                <input type="text" id="precioPresentacion" placeholder="$" required/>
+    
+                <label for="">Receta</label>
+                <input type="text" id="mlReceta" placeholder="ml" required/>
+                
+            </form>
+        </section>
+
+        <div class="resultado_costo">
+            <h2 id="costo"></h2>
+            <button class="boton-calcular">Calcular</button>
+            <button class="boton-reiniciar" onclick="reiniciar()">Reiniciar</button>
+        </div>
+        
+    </main>
+    
+    <!-- FOOTER -->
+    
+    <footer> 
+        <a href="https://www.instagram.com/"><img src="{% static './css/media/logo-instagram2.jpg' %}" alt="logo de instagram" height="40px" width="40px"></a>
+        <a href="https://www.facebook.com/"><img src="{% static './css/media/logo-facebook.png' %}" alt="logo de facebook" height="40px" width="40px"></a>
+        <a href="https://www.youtube.com/@barmaninred"><img src="{% static './css/media/youtube-logo.png' %}" alt="logo de youtube" height="40px" width="40px"></a>
+    </footer>
+
+
+    <script src="{% static 'js/app.js' %}"></script>
+    <script src="{% static 'js/costeo.js' %}"></script>
+    
+</body>
+</html>
