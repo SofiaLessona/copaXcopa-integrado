@@ -30,6 +30,10 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
+APPS_CUSTOM = [
+    "app_receta"
+]
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -38,6 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
+
+INSTALLED_APPS += APPS_CUSTOM
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

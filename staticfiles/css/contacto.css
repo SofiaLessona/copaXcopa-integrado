@@ -1,0 +1,81 @@
+.main_contacto {
+  width: 80%;
+  height: 80%;
+  background-color: rgba(23, 7, 16, 0.482);
+  margin: 15px 10% 5% 10%;;
+  border-radius: 3em;
+}
+  
+.contacto-titulo {
+  text-align: center;
+  margin: 0 auto;
+  padding: 1em 0;
+  color: white;
+  letter-spacing: 6px;
+}
+
+.formulario-contacto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  max-width: 90%;
+  margin-left: 5%;
+  padding: 1em;
+}
+
+.formulario-contacto input{
+  width: 50%;
+  padding: 10px;
+}
+  
+.formulario-control, textarea {
+  background-color: rgba(23, 7, 16, 0.482);
+  letter-spacing: 1px;
+  width: 100%;
+  color: white;
+  padding: 10px;
+}
+  
+.boton-enviar{
+  margin-top: 15px;
+  height: 34px;
+  overflow: hidden;
+}
+
+.enviar {
+  display: block;
+  letter-spacing: 2px;
+  padding: 5px 8px;
+}
+
+  /* HR */
+
+
+.contactanos{
+
+  padding: 0% 15%;
+}
+
+.favicon-cont{
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  
+}
+
+.favicon-a{
+  padding: 2%;
+}
+
+.favicon-a:link, .favicon-a:visited{
+  color: white;
+  text-decoration: none;
+}
+
+.img-contact{
+  height: 40px;
+  width: 40px;
+}

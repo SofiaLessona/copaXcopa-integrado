@@ -1,0 +1,156 @@
+body{
+	background-image: none;
+    background-color: rgba(40, 21, 27, 0.8); 
+}
+
+header{
+	position: fixed;
+	height: calc(100% - 85%);
+	z-index: 2;
+    top: 0;
+}
+
+nav{
+	height: auto;
+}
+
+.boton_logo img{
+	height: calc(100% - 20%)	
+}
+
+/* MAIN */
+
+.left-sidebar {
+	width: 150px;
+	height: 100%;
+	position: fixed;
+	bottom: -14.5%;
+	left: 0;
+    background-color: rgba(40, 21, 27, 0.6);
+}
+
+#menu-sidebar ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#menu-sidebar li:hover{
+    background-color: rgb(57, 29, 38);
+}
+
+#menu-sidebar a {
+	padding: 10%;
+	text-decoration: none;
+	display: block;
+}
+
+.enlace-sidebar{
+    color: white;
+    border: 1px rgba(0, 0, 0, 0.190) solid;
+}
+
+/* CONTENIDO */
+
+#main-container {
+	position: absolute; 
+    top: calc(100% - 90%);
+	width: calc(100% - 20%); 
+	margin: 50px 150px;
+    padding: 50px;
+    text-align: center; 
+    line-height: 2em; 
+}
+
+.tarjeta-receta {
+    width: 100%;
+	height: 70%;
+	margin-top: 2em;
+    display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 2em;
+}
+
+.tarjeta-receta h2{
+    width: 60%;
+	border: 5px outset;
+	background: radial-gradient(circle, #30171ea3, #3d3134a4, #322125c3 );
+    margin-top: 1em;
+    padding: 20px;
+}
+
+.tarjeta-receta iframe, .tarjeta-receta img{
+	width: 560px;
+	height: 315px;
+}
+
+
+
+@media all and (max-width: 850px) {
+    
+	.boton_logo img{
+		max-width: 300px;
+		max-height: 75px;
+
+	}
+	
+    .tarjeta-receta iframe{
+       width: 350px;
+        
+    }
+    .tarjeta-receta img{
+        width: 350px;
+    }
+
+
+
+
+/* MAIN */
+
+.left-sidebar {
+	height: 100%;
+	bottom: -10%;
+}
+
+
+
+	/* CONTENIDO */
+	#main-container {
+		width: calc(100% - 30%); 
+	}
+
+
+
+}
+
+@media all and (max-width: 450px){
+
+/* MAIN */
+
+.left-sidebar {
+	width: 115px;
+	bottom: -10%;
+}
+
+
+
+	/* CONTENIDO */
+	#main-container {
+		width: calc(100% - 50%);
+		margin: 10px 0px 180px 120px;
+    	padding: 20px; 
+	}
+
+
+
+	.tarjeta-receta iframe, .tarjeta-receta img{
+		width: 230px;
+		height: 150px;
+	}
+
+
+
+}
+
+

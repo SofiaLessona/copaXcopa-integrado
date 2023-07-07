@@ -1,0 +1,308 @@
+*{ 
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Raleway'; 
+}
+
+body{ 
+    width: 98vw;   
+    background-color: rgba(40, 21, 27,0.9); 
+    background-image: url("/static/css/media/fondo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;    
+}
+    
+
+             /* HEADER */
+
+.boton_logo{
+    animation-name: shadow;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes shadow {
+    100%{
+        opacity: 1;
+    }        
+}
+
+nav {  
+    height: 15%;
+    width: 99.9vw;
+    background-color: rgb(40, 21, 27);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.lista-paginas {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+    margin-right: 60px;
+}
+
+.enlace:link, .enlace:visited {
+    font-size: 1.3em;
+    text-decoration: none;
+    color: white;
+}
+
+.enlace:active {
+    font-size: 2em;
+    color:black;
+}
+
+.button-menu{
+    display: none;
+}
+
+
+
+            /* MAIN */
+
+.main_index{
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    margin: 50px;
+    gap: 5%;
+}
+
+.tarjeta-main{
+    background-color: rgba(23, 7, 16, 0.482);
+    width: 40%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    padding: 40px;
+    align-items: center;
+    text-align: center;
+    border-radius: 3em;
+    flex-wrap: nowrap;
+}
+
+.tarjeta-main p{
+    margin: 20px
+}
+
+.boton-tarjeta:link, .boton-tarjeta:visited {
+    background-color: rgba(23, 7, 16, 0.8);
+    text-decoration: none;
+    color: white;
+    text-shadow: 0.5px 0.5px white;
+    border-radius: 3em;
+    padding: 0.7em;
+}
+
+.boton-tarjeta:active{
+    color:white;
+}
+
+
+            /* FOOTER */
+
+footer{
+    height: 7%;
+    width: 100vw;
+    background-color: rgb(40, 21, 27);
+    position: fixed;
+    bottom: 0px;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+footer > a > img {
+    border-radius: 50%;
+}
+
+
+
+
+                /* MEDIA */
+
+
+@media all and (max-width: 850px) {
+
+    body{
+        height: auto;
+    }
+
+        /* HEADER */
+
+    header{
+        height: 15%;
+    }
+
+    nav { 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .lista-paginas {
+        list-style: none;
+        align-items: center;
+        gap: 1em;
+        margin-bottom: 1em;
+    }
+
+        /* MAIN  */
+   
+    main{
+        flex-direction: column;
+        gap: 1em;
+    }
+    
+    .tarjeta-main{
+        font-size: 1em;
+        width: auto;
+        max-width: 70vw;
+        flex-wrap: nowrap;
+        margin: 1em 0 1em 0;
+        gap: 0.5em;
+
+    }
+
+    .boton-tarjeta:link, .boton-tarjeta:visited {
+        background-color: rgba(23, 7, 16, 0.6) ;
+        text-decoration: none;
+        color: white;
+        text-shadow: 0.5px 0.5px white;
+        border-radius: 3em;
+    }
+
+    .boton-tarjeta:active{
+        font-size: 1em;
+        color:white;
+    }
+
+    footer a{ 
+        margin-top: 1em;
+    }
+}
+    
+
+
+@media all and (max-width: 450px) {
+        /* HEADER */
+        
+        /* .boton_logo img{
+            max-width: 300px;
+            max-height: 75px;
+    
+        } */
+
+
+    nav {  
+        width: 99.9vw;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+            /* menu burger */
+
+    .div-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100%;
+        margin-left: -100%;
+        transition: all 0.2s linear;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 100;
+    }
+
+    .div-nav.show {
+        margin-left: 0;
+    }
+
+    .lista-paginas {
+        background-color: rgba(23, 7, 16, 0.9);
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        height: 100%;
+        align-items: center;
+        justify-content: flex-start;
+    }
+  
+    .enlace {
+        margin-top: 2rem;
+        color: white;
+        text-decoration: none;
+        position: relative;
+    }
+  
+    .enlace::after {
+        position: absolute;
+        background-color: white;
+        bottom: -5px;
+        left: 0;
+        width: 0%;
+        height: 3px;
+    }
+  
+    .button-menu {
+        z-index: 200;
+        width: 40px;
+        height: 40px;
+        border: none;
+        display: flex;
+        background: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+    
+    .button-menu span {
+        width: 37px;
+        height: 4px;
+        margin-bottom: 5px;
+        position: relative;
+        background: white;
+        border-radius: 3px;
+        transform-origin: 4px 0px;
+        transition: all 0.2s linear;
+    }
+  
+    .button-menu.close span {
+        opacity: 1;
+        transform: rotate(45deg) translate(0px, 0px);
+        background: #ffffff;
+    }
+    
+    .button-menu.close span:nth-child(2) {
+        transform: rotate(-45deg) translate(-8px, 5px);
+    }
+    
+    .button-menu.close span:nth-child(3) {
+        display: none;
+    }
+    
+        /* MAIN  */
+            
+    .tarjeta-main{
+        max-width: 80%;        
+        padding: 1em;
+    }
+
+}
